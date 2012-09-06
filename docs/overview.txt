@@ -110,6 +110,18 @@ Some major search engines allow an asterisk (``*``) as a wildcard to match any
 sequence of characters and a dollar sign (``$``) to match the end of the URL,
 e.g., ``'/*.jpg$'`` can be used to match all jpeg files.
 
+Host
+====
+If your site has mirrors, a special mirroring robot will locate them and generate
+a group of mirrors for your site. Only the main mirror will participate in the search.
+You can specify it for all the mirrors in the robots.txt file using the 'Host' directive.
+Specify the name of the main mirror as the directive parameter.
+The 'Host' directive does not guarantee that the specified main mirror will be selected.
+However, the decision making algorithm takes it into account with high priority.
+
+    ROBOTS_HOST_URL = 'www.main-mirror.com'
+
+
 Caching
 =======
 

@@ -16,3 +16,5 @@ if SITEMAP_URL is not None:
 USE_SITEMAP = getattr(settings, 'ROBOTS_USE_SITEMAP', True)
 
 CACHE_TIMEOUT = getattr(settings, 'ROBOTS_CACHE_TIMEOUT', None)
+
+HOST_URL = getattr(settings, 'ROBOTS_HOST_URL', None)

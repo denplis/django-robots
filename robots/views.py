@@ -19,6 +19,7 @@ def rules_list(request, template_name='robots/rule_list.html',
 
     sitemap_url = settings.SITEMAP_URL
     sitemap_urls = settings.SITEMAP_URLS
+    host_url = settings.HOST_URL
 
     if not sitemap_urls and settings.USE_SITEMAP:
         sitemap_url = None
@@ -45,6 +46,7 @@ def rules_list(request, template_name='robots/rule_list.html',
         'rules': rules,
         'sitemap_url': sitemap_url, # for old templates
         'sitemap_urls': sitemap_urls,
+        'host_url': host_url
     })
     return HttpResponse(t.render(c), status=status_code, mimetype=mimetype)
 
